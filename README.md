@@ -1,8 +1,6 @@
 # ISIT 360 Database Application Development
 
-## Setup & Dependencies
-
-### Windows
+## Windows Setup & Dependencies
 
 Run these three commands in PowerShell (Run as Administrator):
 
@@ -20,7 +18,7 @@ These tools should now be installed, which we'll be using throughout the course:
 - [Python](https://www.python.org/) [programming language runtime]
 - [Poetry](https://python-poetry.org/) [python package/project manager]
 
-### Mac
+## Mac Setup & Dependencies
 
 Run these three commands in Terminal:
 
