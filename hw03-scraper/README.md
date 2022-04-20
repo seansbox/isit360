@@ -40,11 +40,11 @@ Once you have choco/brew, python, and poetry installed...
 
     SELECT name FROM movies WHERE release >= date('now','start of month','-24 months');
 
-    SELECT movies.name, genres.name FROM movies LEFT JOIN map_movie_genre ON map_movie_genre.movie_href = movies.href INNER JOIN genres ON genres.href = map_movie_genre.genre_href;
+    SELECT movies.name, genres.name FROM movies LEFT JOIN map_movie_genre ON map_movie_genre.movie_id = movies.id INNER JOIN genres ON genres.id = map_movie_genre.genre_id;
 
-    SELECT movies.name, genres.name FROM movies LEFT JOIN map_movie_genre ON map_movie_genre.movie_href = movies.href INNER JOIN genres ON genres.href = map_movie_genre.genre_href WHERE genres.href = 'action';
+    SELECT movies.name, genres.name FROM movies LEFT JOIN map_movie_genre ON map_movie_genre.movie_id = movies.id INNER JOIN genres ON genres.id = map_movie_genre.genre_id WHERE genres.id = 'action';
     
-    SELECT movies.name, celebs.name FROM movies LEFT JOIN map_movie_celeb ON map_movie_celeb.movie_href = movies.href INNER JOIN celebs ON celebs.href = map_movie_celeb.celeb_href WHERE celebs.name LIKE '%John%';
+    SELECT movies.name, celebs.name FROM movies LEFT JOIN map_movie_celeb ON map_movie_celeb.movie_id = movies.id INNER JOIN celebs ON celebs.id = map_movie_celeb.celeb_id WHERE celebs.name LIKE '%John%';
 
     SELECT meter+score, name FROM movies ORDER BY meter+score DESC;
     

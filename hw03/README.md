@@ -11,8 +11,13 @@
 
 ### Windows
 
-    choco install sqlite3
+    choco install sqlite
 >
     choco install sqlite-studio.portable
 >
     pip install sqlite-web
+
+## SQL and Python Sqlite Additional Videos
+
+- https://www.youtube.com/watch?v=byHcYRpMgI4 90ish mins
+- https://www.youtube.com/watch?v=pd-0G0MigUA 30ish mins
