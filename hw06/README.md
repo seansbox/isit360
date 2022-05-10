@@ -27,21 +27,31 @@ Setting up a Web-based App
 ## How I setup an initial app/model
 
     python manage.py startapp movies
-    --- edit movies/models.py
-    --- edit yummytomatoes/settings.py (INSTALLED_APPS)
+    code movies/models.py
+    code yummytomatoes/settings.py
+        INSTALLED_APPS
     python manage.py makemigrations
     python manage.py showmigrations
     python manage.py sqlmigrate movies 0001
     python manage.py migrate
 
     python manage.py makemigrations --empty movies
-    --- edit movies/migrations/0002_default_data.py
+    code movies/migrations/0002_default_data.py
     python manage.py migrate
     python manage.py runserver
 
 ## How I setup an initial admin portal
 
-    --- edit movies/admin.py
+    code movies/admin.py
+
+## How I setup an initial home page
+
+    code yummytomatoes/urls.py
+        'DIRS': [os.path.join(BASE_DIR, 'yummytomatoes', 'templates')]
+    code movies/urls.py
+    code yummytomatoes/urls.py
+        path('', include('movies.urls')),
+    code movies/templates/movies/index.html
 
 ## How I deployed my app to Heroku
 
@@ -93,10 +103,10 @@ Create our Heroku project and test it
 
     Just for me, due to using subfolders:
         heroku buildpacks:clear
-        buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack
+        heroku buildpacks:set https://github.com/timanovsky/subdir-heroku-buildpack
         heroku buildpacks:add heroku/python
         heroku config:set PROJECT_PATH=hw06
-        
+
     git add .
     git commit -m "Adds Heroku"
     git push heroku
@@ -106,8 +116,19 @@ Create our Heroku project and test it
 
 ## Handy references
 
-- Heroku/Django Setup Guide: https://realpython.com/django-hosting-on-heroku/
 - Django Models: https://docs.djangoproject.com/en/4.0/topics/db/models/
 - Model Field Reference: https://docs.djangoproject.com/en/4.0/ref/models/fields/
+- Heroku/Django Guide: https://realpython.com/django-hosting-on-heroku/
 - Heroku/Django Guide: https://medium.com/geekculture/how-to-deploy-a-django-app-on-heroku-4d696b458272
 - Heroku/Waitress Guide: https://docs.pylonsproject.org/projects/waitress/en/stable/usage.html
+- Waitress Web Server: https://docs.pylonsproject.org/projects/waitress/en/latest/
+- WhiteNoise Static File Server: http://whitenoise.evans.io/en/stable/
+- Bootstrap Introduction: https://getbootstrap.com/docs/5.1/getting-started/introduction/
+- Bootstrap Examples: https://getbootstrap.com/docs/5.1/examples/
+- Bootswatch Themes: https://bootswatch.com/
+
+## Handy reading
+
+- https://docs.djangoproject.com/en/4.0/intro/tutorial01/
+- https://docs.djangoproject.com/en/4.0/intro/tutorial02/
+- https://docs.djangoproject.com/en/4.0/intro/tutorial03/
