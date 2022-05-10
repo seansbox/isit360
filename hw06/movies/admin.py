@@ -2,7 +2,9 @@ from django.contrib import admin
 
 from .models import Celeb, Genre, Movie
 
-admin.site.site_header = 'Fresh Tomatoes Administration'
+admin.site.site_header = 'Fresh Tomatoes Administration' # default: "Django Administration"
+admin.site.index_title = 'Site administration'           # default: "Site administration"
+admin.site.site_title  = 'Fresh Tomatoes admin'          # default: "Django site admin"
 
 class CelebAdmin(admin.ModelAdmin):
     list_display = ('name', 'birthday', 'birthplace')

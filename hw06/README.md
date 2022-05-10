@@ -15,7 +15,7 @@ Setting up a Web-based App
     poetry init -n
     code .
     poetry shell
-    poetry add django
+    poetry add django gunicorn dj-database-url whitenoise psycopg2-binary
     django-admin startproject freshtomatoes .
     python manage.py showmigrations
     python manage.py migrate
@@ -44,20 +44,51 @@ Setting up a Web-based App
 
 ## How I deployed my app to Heroku
 
+Install Heroku's command-line tool...
+
     -- sign-up for free at https://signup.heroku.com/
     choco install heroku-cli (Windows PowerShell as Administrator)
     brew tap heroku/brew && brew install heroku (macOS Terminal)
 
-    heroku login
-    poetry export -f requirements.txt --output requirements.txt
-    --- then cleanup requirements.txt
+Create some new fancy Heroku files...
+
+    poetry export --format requirements.txt --without-hashes --output requirements.txt
+    --- then cleanup requirements.txt (remove any extras)
     echo python-3.9.6 > runtime.txt
-    echo "web: python manage.py runserver 0.0.0.0:\$PORT" > Procfile
+    echo web: python manage.py runserver 0.0.0.0:$PORT > Procfile
+    echo web: gunicorn clean-tomatoes.wsgi > Procfile
+
+Make some changes in app/settings.py...
+
+    add 'whitenoise.runserver_nostatic' to INSTALLED_APPS
+    add ['localhost', '127.0.0.1', '.herokuapp.com'] to ALLOWED_HOSTS
+    add 'whitenoise.middleware.WhiteNoiseMiddleware' right after 'SecurityMiddleware' to MIDDLEWARE
+    add 'import os' to the TOP
+    add to the bottom:
+        STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+        STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    add after DATABASES
+        import dj_database_url
+        db_from_env = dj_database_url.config(conn_max_age=500)
+        DATABASES['default'].update(db_from_env)
+    python manage.py runserver 0.0.0.0
+    waitress-serve freshtomatoes.wsgi:application
+
+Create our Heroku project and test it
+
+    heroku login
     heroku create clean-tomatoes
     heroku local --port 5001
+
+    heroku addons:create heroku-postgresql:hobby-dev --app clean-tomatoes
+    heroku run python manage.py migrate --app clean-tomatoes
+    heroku run python manage.py createsuperuser
+    heroku open
 
 ## Handy references
 
 - Heroku/Django Setup Guide: https://realpython.com/django-hosting-on-heroku/
 - Django Models: https://docs.djangoproject.com/en/4.0/topics/db/models/
 - Model Field Reference: https://docs.djangoproject.com/en/4.0/ref/models/fields/
+- Heroku/Django Guide: https://medium.com/geekculture/how-to-deploy-a-django-app-on-heroku-4d696b458272
+- Heroku/Waitress Guide: https://docs.pylonsproject.org/projects/waitress/en/stable/usage.html
