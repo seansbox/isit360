@@ -10,6 +10,8 @@ Run these three commands in PowerShell (Run as Administrator):
 >
     (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
 
+    pip install pipenv
+
 These tools should now be installed, which we'll be using throughout the course:
 
 - [Chocolatey](https://chocolatey.org/) [command-line based app install manager]
