@@ -60,6 +60,7 @@ Create some new fancy Heroku files...
 
 Make some changes in app/settings.py...
 
+    replace SECRET_KEY with: SECRET_KEY=os.environ['SECRET_KEY']
     add 'whitenoise.runserver_nostatic' to INSTALLED_APPS
     add ['localhost', '127.0.0.1', '.herokuapp.com'] to ALLOWED_HOSTS
     add 'whitenoise.middleware.WhiteNoiseMiddleware' right after 'SecurityMiddleware' to MIDDLEWARE
@@ -78,11 +79,17 @@ Create our Heroku project and test it
 
     heroku login
     heroku create clean-tomatoes
+        or
+    heroku git:remote -a clean-tomatoes
     heroku local --port 5001
 
-    heroku addons:create heroku-postgresql:hobby-dev --app clean-tomatoes
-    heroku run python manage.py migrate --app clean-tomatoes
-    heroku run python manage.py createsuperuser
+    heroku addons:create heroku-postgresql:hobby-dev
+    heroku config:set DJANGO_SUPERUSER_USERNAME=admin
+    heroku config:set DJANGO_SUPERUSER_PASSWORD=PASSWORD
+    heroku config:set DJANGO_SUPERUSER_EMAIL=seansbox@gmail.com
+    heroku config:set SECRET_KEY=django-sfgljheroghoh3h8*y9889y
+    heroku run:detached python manage.py migrate
+    heroku run:detached python manage.py createsuperuser --noinput
     heroku open
 
 ## Handy references
