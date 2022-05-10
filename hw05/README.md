@@ -58,3 +58,4 @@ Each has implications on performance and CRUD operations.
 
 - MongoDB Query Selectors: https://www.mongodb.com/docs/manual/reference/operator/query/#std-label-query-selectors
 - PyMongo Collection API: https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html
+- AWS Database Services: https://aws.amazon.com/products/databases/
