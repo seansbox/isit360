@@ -3,20 +3,18 @@ Setting up a Web-based App
 
 ## How to run this project
 
-    poetry install
-    poetry run python manage.py migrate
-    poetry run python manage.py runserver
+    pipenv install
+    pipenv run python manage.py migrate
+    pipenv run python manage.py runserver
     heroku local -f Profile.windows
 
 ## How I originally built the project
 
-    poetry config virtualenvs.in-project true
     mkdir hw06
     cd hw06
-    poetry init -n
     code .
-    poetry shell
-    poetry add django waitress dj-database-url whitenoise psycopg2-binary
+    pipenv isntall django waitress dj-database-url whitenoise psycopg2-binary
+    pipenv shell
     django-admin startproject yummytomatoes .
     python manage.py showmigrations
     python manage.py migrate
@@ -65,9 +63,6 @@ Install Heroku's command-line tool...
 
 Create some new fancy Heroku files...
 
-    poetry export --format requirements.txt --without-hashes --output requirements.txt
-    --- then cleanup requirements.txt (remove any extras)
-    echo python-3.9.12 > runtime.txt
     echo web: waitress-serve --listen "*:$PORT" --trusted-proxy '*' --trusted-proxy-headers 'x-forwarded-for x-forwarded-proto x-forwarded-port' --log-untrusted-proxy-headers --clear-untrusted-proxy-headers --threads ${WEB_CONCURRENCY:-4} yummytomatoes.wsgi:application > Procfile
     echo web: waitress-serve --port %PORT% yummytomatoes.wsgi:application > Procfile.windows
     echo SECRET_KEY=vd;ohvhvhsvhsklfvhlekjhvli3n > .env
@@ -78,6 +73,7 @@ Make some changes in app/settings.py...
     replace SECRET_KEY with: SECRET_KEY=os.environ['SECRET_KEY']
     add 'whitenoise.runserver_nostatic' to INSTALLED_APPS
     add ['localhost', '127.0.0.1', '.herokuapp.com'] to ALLOWED_HOSTS
+    add CSRF_TRUSTED_ORIGINS = ['https://*.herokuapp.com'] just below ALLOWED_HOSTS
     add 'whitenoise.middleware.WhiteNoiseMiddleware' right after 'SecurityMiddleware' to MIDDLEWARE
     add after DATABASES:
         import dj_database_url
