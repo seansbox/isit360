@@ -9,7 +9,6 @@ waitress = "*"
 dj-database-url = "*"
 whitenoise = "*"
 psycopg2-binary = "*"
-python-dotenv = "*"
 
 [dev-packages]
 
