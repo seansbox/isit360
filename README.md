@@ -1,6 +1,8 @@
 # ISIT 360 Database Application Development
 
-## Windows Setup & Dependencies
+## How to install the tools for this course...
+
+### Windows
 
 Run these three commands in PowerShell (Run as Administrator):
 
@@ -8,32 +10,37 @@ Run these three commands in PowerShell (Run as Administrator):
 >
     choco install git vscode python
 >
-    (Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing).Content | python -
+    python -m pip install pipenv poetry
 
-    pip install pipenv
+### MacOS
 
-These tools should now be installed, which we'll be using throughout the course:
-
-- [Chocolatey](https://chocolatey.org/) [command-line based app install manager]
-- [Git](https://git-scm.com/) [source code manager]
-- [Code](https://code.visualstudio.com/) *(Visual Studio)* [fancy text editor]
-- [Python](https://www.python.org/) [programming language runtime]
-- [Poetry](https://python-poetry.org/) [python package/project manager]
-
-## Mac Setup & Dependencies
-
-Run these three commands in Terminal:
+Run these three commands in macOS Terminal:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 >
     brew install git vscode python
 >
-    curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+    python -m pip install pipenv poetry
 
-These tools should now be installed, which we'll be using throughout the course:
+## You should now have these tools installed...
 
-- [Homebrew](https://brew.sh/) [command-line based app install manager]
-- [Git](https://git-scm.com/) [source code manager]
-- [Code](https://code.visualstudio.com/) *(Visual Studio)* [fancy text editor]
-- [Python](https://www.python.org/) [programming language runtime]
-- [Poetry](https://python-poetry.org/) [python package/project manager]
+- [Chocolatey](https://chocolatey.org/) (Windows command-line app installer/manager)
+- [Homebrew](https://brew.sh/) (macOS command-line app installer/manager)
+- [Git](https://git-scm.com/) (source code versioning/manager)
+- [Visual Studio Code](https://code.visualstudio.com/) (excellent text/dev editor)
+- [Python](https://www.python.org/) (programming language runtime)
+- [PipEnv](https://pipenv.pypa.io/) (python package/project manager)
+- [Poetry](https://python-poetry.org/) (python package/project manager)
+
+## Here is a work-in-process module outline...
+
+- M01 Welcome and Python Crash Course *(ch1,4)*
+- M02 Files, Formats, and Serialization *(ch5,6)*
+- M03 Structuring Data and Querying It *(ch7,8)*
+- M04 Mapping Objects and Speaking Excel *(ch9,10)*
+- M05 Data Without Structure, with Structure *(ch11,12)*
+- M06 Building the Blocks of an MVC App *(dj1,2)*
+- M07 Making Templates and Displaying Data *(dj3)*
+- M08 Data Change Forms and Permissions *(dj4)*
+- M09 Deploying a Database Application *(hero)*
+- M10 Advanced Data Features & Strategies
