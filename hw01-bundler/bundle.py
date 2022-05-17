@@ -29,7 +29,9 @@ for file in files:
     if 'build' in file or 'dist' in file or '__init__.py' in file: continue
     if 'manage.py' in file or 'asgi.py' in file or 'wsgi.py' in file: continue
     print(' - ' + colored(f"{file}", 'green'))
-    document.add_heading(file, 0)
+    h = document.add_heading(file, 0)
+    h.style.font.size = Pt(18)
+    h.style.font.bold = True
     if '.png' in file or '.jpg' in file:
         document.add_picture(file, width=Inches(6))
     else:
