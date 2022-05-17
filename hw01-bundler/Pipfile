@@ -11,7 +11,7 @@ termcolor = "*"
 pyinstaller = "*"
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
 
 [scripts]
 build = "pyinstaller --onefile --distpath . bundle.py"
