@@ -35,7 +35,7 @@ for file in files:
     if '.png' in file or '.jpg' in file:
         document.add_picture(file, width=Inches(6))
     else:
-        with open(file) as f:
+        with open(file, 'r', encoding='utf-8', errors='ignore') as f:
             document.add_paragraph(f.read()).style.font.size = Pt(9)
     document.add_page_break()
 
