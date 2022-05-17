@@ -1,3 +1,5 @@
+# HW03 Structuring Data and Querying It
+
 ## Installing The Tools
 
 ### Mac

@@ -1,4 +1,4 @@
-# HW05
+# HW05 Data Without Structure, with Structure
 
 ## How to setup dependencies (MongoDB for non-production testing)
 

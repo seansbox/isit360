@@ -1,5 +1,16 @@
-# HW06
-Setting up a Web-based App
+# HW06 Building the Blocks of an MVC App
+
+## Important topics...
+
+- ***MVC***: Models, Views, Controllers
+- Modifying ***views*** (views.py) and ***routes*** (urls.py)
+- Plumbing in ***templates*** (.html folders)
+
+## Select reading...
+
+- https://docs.djangoproject.com/en/4.0/intro/tutorial01/
+- https://docs.djangoproject.com/en/4.0/intro/tutorial02/
+- https://docs.djangoproject.com/en/4.0/intro/tutorial03/
 
 ## How to run this project...
 
@@ -77,9 +88,3 @@ Setting up a Web-based App
 - Django Templates: https://docs.djangoproject.com/en/4.0/topics/templates/
 - Django Models: https://docs.djangoproject.com/en/4.0/topics/db/models/
 - Model Field Reference: https://docs.djangoproject.com/en/4.0/ref/models/fields/
-
-## Handy reading
-
-- https://docs.djangoproject.com/en/4.0/intro/tutorial01/
-- https://docs.djangoproject.com/en/4.0/intro/tutorial02/
-- https://docs.djangoproject.com/en/4.0/intro/tutorial03/

@@ -1,0 +1,14 @@
+{% extends 'movies/base.html' %}
+
+{% block content %}
+<h2>Movies Index!</h2>
+{% if movies %}
+    <ul>
+    {% for movie in movies %}
+        <li><a href="{% url 'movies:detail' movie.id %}">{{ movie.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No movies.</p>
+{% endif %}
+{% endblock content %}
