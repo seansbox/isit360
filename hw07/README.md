@@ -5,12 +5,12 @@
 - More on ***template*** files
 - Adding in ***static*** files
 - Exposing a ***model*** to a ***controller***
-- Using ***scripts*** in Pipfiles
 
 ## Select reading...
 
 - https://docs.djangoproject.com/en/4.0/intro/tutorial03/
 - https://docs.djangoproject.com/en/4.0/intro/tutorial06/
+- https://django-book.readthedocs.io/en/latest/index.html
 
 ## Running this project...
 
@@ -51,7 +51,3 @@ See HW06 for baseline, then...
     code movies\views.py
     code movies\templates\movies\index.py
     code movies\templates\movies\detail.py
-
-## Useful references...
-
-- https://django-book.readthedocs.io/en/latest/index.html
