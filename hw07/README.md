@@ -32,8 +32,8 @@ See HW06 for baseline, then...
     code movies\templates\movies\base.html to extend common/base.html
     code common\urls.py
     code common\views.py
-    breakout front and help pages/views/urls
-    add app_name = 'x' to urls.py
+    breakout front and help pages & views & urls
+    add app_name = '???' to urls.py
     update all of the template files
         fix new template paths
         move to {% url 'x:y' %} style links

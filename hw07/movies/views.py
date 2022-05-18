@@ -1,4 +1,3 @@
-from django.http import Http404
 from django.shortcuts import render
 
 from .models import Movie
@@ -10,10 +9,7 @@ def index(request):
 
 def detail(request, id):
     context = {}
-    try:
-        context['movie'] = Movie.objects.get(pk=id)
-    except Movie.DoesNotExist:
-        raise Http404("Movie does not exist")
+    context['movie'] = Movie.objects.get(pk=id)
     return render(request, 'movies/detail.html', context)
 
 def celebs(request):
