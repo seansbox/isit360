@@ -41,6 +41,6 @@ Run these three commands in macOS Terminal:
 - M05 Data Without Structure, with Structure *(ch11,12)*
 - M06 Building the Blocks of an MVC App *(dj1,2)*
 - M07 Making Templates and Displaying Data *(dj3,6)*
-- M08 Data Change Forms and Permissions *(dj4,7)*
+- M08 Data Forms and Permissions *(dj4,7)*
 - M09 Deploying a Database Application *(hero)*
 - M10 Advanced Data Features & Strategies
