@@ -30,6 +30,15 @@ Add related data to a view...
 
     code movies\templates\movies\details.html
 
+Add login, logout, and ***authentication***...
+
+    code yummytomatoes\settings.py
+        LOGIN_URL = "/login/"
+        LOGIN_REDIRECT_URL = "/"
+        LOGOUT_REDIRECT_URL = "/"
+    code common\templates\common\login.html
+    code yummytomatoes\urls.py
+
 Add an edit form template and view...
 
     pipenv install django-crispy-forms
@@ -39,10 +48,9 @@ Add an edit form template and view...
             'crispy_forms',
         )
         CRISPY_TEMPLATE_PACK = 'bootstrap4'
-    code movies\forms.py
-    code movies\templates\movies\details.html
-
-Add login, logout, and ***authentication***...
-
-    code common\templates\common\login.html
-    code yummytomatoes\urls.py
+    code movies\views.py
+    code movies\urls.py
+    code movies\templates\movies\movie_list.html
+    code movies\templates\movies\movie_detail.html
+    code movies\templates\movies\movie_form.html
+    code movies\templates\movies\movie_confirm_detail.html
