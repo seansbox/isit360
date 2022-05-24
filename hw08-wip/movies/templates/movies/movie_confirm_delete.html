@@ -1,0 +1,14 @@
+{% extends 'movies/movie_base.html' %}
+{% block title %}Delete {{ movie.name }}{% endblock %}
+{% load static %}
+
+{% block content %}
+<h1>Okay to delete {{ movie.name }}?</h1>
+<br>
+<form method="post">
+    {% csrf_token %}
+    <input type="hidden" value="{{ movie.id }}" name="itemsToDelete" />
+    <a class="btn btn-info" href="{% url 'movies:detail' movie.id %}">Return</a>
+    <input type="submit" class="btn btn-danger" value="Confirm Delete" />
+</form>
+{% endblock content %}

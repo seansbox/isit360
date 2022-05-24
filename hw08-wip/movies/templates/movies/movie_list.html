@@ -1,6 +1,5 @@
-{% extends 'movies/base_movies.html' %}
-
-{% block title %}Movies Index{% endblock %}
+{% extends 'movies/movie_base.html' %}
+{% block title %}Movies{% endblock %}
 
 {% block content %}
 
@@ -10,6 +9,10 @@
         <li class="breadcrumb-item active" aria-current="page">Movies</li>
     </ol>
 </nav>
+
+{% if perms.movies.create_movie %}
+<a class="btn btn-info float-end" href="{% url 'movies:create' %}">Create Movie</a>
+{% endif %}
 
 <h2>Select a movie below...</h2>
 

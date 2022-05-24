@@ -1,7 +1,6 @@
-{% extends 'movies/base_movies.html' %}
-{% load static %}
-
+{% extends 'movies/movie_base.html' %}
 {% block title %}{{ movie.name }}{% endblock %}
+{% load static %}
 
 {% block content %}
 
@@ -21,5 +20,12 @@
 <p><i>{{ movie.summary }}</i></p>
 
 <p>Meter: {{ movie.meter }} | Score: {{ movie.score }}</p>
+
+{% if perms.movies.update_movie %}
+<a class="btn btn-info" href="{% url 'movies:update' movie.id %}">Update</a>
+{% endif %}
+{% if perms.movies.delete_movie %}
+<a class="btn btn-danger" href="{% url 'movies:delete' movie.id %}">Delete</a>
+{% endif %}
 
 {% endblock content %}
