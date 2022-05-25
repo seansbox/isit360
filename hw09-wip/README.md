@@ -14,7 +14,7 @@ Setting up a Web-based App
     mkdir hw06
     cd hw06
     code .
-    pipenv install django waitress dj-database-url whitenoise psycopg2-binary
+    pipenv install django python-dotenv waitress dj-database-url whitenoise psycopg2-binary
     pipenv shell
     django-admin startproject yummytomatoes .
     python manage.py showmigrations
