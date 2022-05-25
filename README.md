@@ -8,9 +8,9 @@ Run these three commands in PowerShell (Run as Administrator):
 
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 >
-    choco install git vscode python
+    choco install git vscode python heroku-cli
 >
-    python -m pip install pipenv poetry
+    python -m pip install pipenv
 
 ### MacOS
 
@@ -18,19 +18,19 @@ Run these three commands in macOS Terminal:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 >
-    brew install git vscode python
+    brew tap heroku/brew && brew install git visual-studio-code python heroku
 >
-    python -m pip install pipenv poetry
+    python -m pip install pipenv
 
 ## You should now have these tools installed...
 
 - [Chocolatey](https://chocolatey.org/) (Windows command-line app installer/manager)
 - [Homebrew](https://brew.sh/) (macOS command-line app installer/manager)
-- [Git](https://git-scm.com/) (source code versioning/manager)
 - [Visual Studio Code](https://code.visualstudio.com/) (excellent text/dev editor)
 - [Python](https://www.python.org/) (programming language runtime)
 - [PipEnv](https://pipenv.pypa.io/) (python package/project manager)
-- [Poetry](https://python-poetry.org/) (python package/project manager)
+- [Git](https://git-scm.com/) (source code versioning/manager)
+- [Heroku](https://www.heroku.com/) (Internet app deployment platform)
 
 ## Here is a work-in-process module outline...
 

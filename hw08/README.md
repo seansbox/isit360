@@ -72,4 +72,11 @@ We're going to move our database web application to the Internet. To do that we 
         git commit -am "Initial Heroku attempt"
         git push heroku master
 
+- Setup our app's admin user on Heroku
+
+        heroku config:set DJANGO_SUPERUSER_USERNAME=admin
+        heroku config:set DJANGO_SUPERUSER_PASSWORD=PASSWORD
+        heroku config:set DJANGO_SUPERUSER_EMAIL=whatever@somewhere.com
+        heroku run:detached python manage.py createsuperuser --noinput
+
 - Visit your new website!
