@@ -1,6 +1,15 @@
-# HW08 Deploying Our Project to the Internet
+# HW08 Deploying a Database Application
 
-## New things to do...
+We're going to move our database web application to the Internet. To do that we need to make some "tweaks" to how Django serves up our website. ***python manage.py runserver*** will still work locally, but it is not recommended to use in production. We're going to use ***waitress*** and ***whitenoise***, two ultra-fast python projects, to make our application able to scale to Instragram-level success! Because we can. We'll also need to migrate from ***Sqlite*** to ***Postgres*** for Internet production so we have a true, persistent data store for our data to live in.
+
+## Select reading...
+
+- http://whitenoise.evans.io/en/stable/
+- https://docs.pylonsproject.org/projects/waitress/en/stable/usage.html
+- https://realpython.com/django-hosting-on-heroku/
+- https://medium.com/geekculture/how-to-deploy-a-django-app-on-heroku-4d696b458272
+
+## How to make it happen...
 
 - Sign-up for an account at Heroku! (https://signup.heroku.com/)
 - Install the Heroku command-line tool (run PowerShell as Administrator)
