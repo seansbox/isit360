@@ -12,10 +12,10 @@ elif __file__:
 os.chdir(app_path)
 
 types = [
-    '**/*.md', '**/*.toml', '**/Pipfile',
+    '**/*.md', '**/Pipfile', '**/Procfile',
     '**/*.py', '**/*.htm', '**/*.html',
     '**/*.csv', '**/*.json', '**/*.xml',
-    '**/*.png', '**/*.jpg'
+    '**/*.png', '**/*.jpg', '**/*.gif'
 ]
 
 files = []
@@ -32,7 +32,7 @@ for file in files:
     h = document.add_heading(file, 0)
     h.style.font.size = Pt(18)
     h.style.font.bold = True
-    if '.png' in file or '.jpg' in file:
+    if '.png' in file.lower() or '.jpg' in file.lower() or '.gif' in file.lower():
         document.add_picture(file, width=Inches(6))
     else:
         with open(file, 'r', encoding='utf-8', errors='ignore') as f:
