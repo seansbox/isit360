@@ -1,0 +1,23 @@
+# HW09 Data Forms and Permissions
+
+*This folder accompanies a live session recording available on Canvas for this course.*
+
+Our database app is up and running and even deployed to Heroku! NOW... let's add some ***permissions*** and the ability for ***users*** to make changes. Presently we have our website, and we have our admin site. Let's make it so we can add some "regular" users and allow them to make changes from the website!
+
+## Important topics...
+
+- Intro to HTML ***forms***, GET and POST actions ([link](https://docs.djangoproject.com/en/4.0/topics/forms/))
+- Cheating with ***class-based generic views*** ([link](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/))
+- Permissions with ***view decorators*** (e.g. login_required, permission_required) ([link](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/#decorating-class-based-views))
+
+## Stuff to study...
+
+- https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/
+- https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-display/
+- https://docs.djangoproject.com/en/4.0/topics/class-based-views/generic-editing/
+
+## How to make it happen...
+
+- Refactor the template files...
+- Add user/perm stuff to our templates...
+- Change our views to class-based generic views...
