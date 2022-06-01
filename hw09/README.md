@@ -8,6 +8,7 @@ Our database app is up and running and even deployed to Heroku! NOW... let's add
 
 - Intro to HTML ***forms***, GET and POST actions ([link](https://docs.djangoproject.com/en/4.0/topics/forms/))
 - Cheating with ***class-based generic views*** ([link](https://docs.djangoproject.com/en/4.0/topics/class-based-views/intro/))
+- Adding views and templates for ***create***, ***update***, and ***delete*** actions.
 
 ## Stuff to study...
 
