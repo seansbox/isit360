@@ -18,7 +18,7 @@ Run these three commands in macOS Terminal:
 
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 >
-    brew tap heroku/brew && brew install git visual-studio-code python heroku
+    brew tap heroku/brew && brew install git visual-studio-code python heroku postgresql
 >
     python -m pip install pipenv
 
@@ -31,6 +31,7 @@ Run these three commands in macOS Terminal:
 - [PipEnv](https://pipenv.pypa.io/) (python package/project manager)
 - [Git](https://git-scm.com/) (source code versioning/manager)
 - [Heroku](https://www.heroku.com/) (Internet app deployment platform)
+- [PostgreSQL](https://www.postgresql.org/) (Free database server; install needed on Mac to install psycopg2-binary towards the end of the course)
 
 ## Here is a work-in-process module outline...
 

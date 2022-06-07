@@ -1,6 +1,8 @@
 {% extends "common/base.html" %}
 {% load crispy_forms_tags %}
 
+{% block title %}Login{% endblock %}
+
 {% block content %}
 
 <div class="container col-sm-6 col-md-5 col-lg-4 col-xl-3">
@@ -8,7 +10,7 @@
         {% csrf_token %}
         {{ form|crispy }}
         <br>
-        <input type="submit" class="btn btn-primary" value="Login">
+        <input type="submit" class="btn btn-info" value="Save">
     </form>
 </div>
 

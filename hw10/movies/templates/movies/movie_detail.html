@@ -13,7 +13,9 @@
     </ol>
 </nav>
 
+{% if perms.movies.change_movie %}
 <a class="btn btn-info float-end" href="{% url 'movies:update' movie.id %}">Update Movie</a>
+{% endif %}
 <h1>{{ movie.name }}</h1>
 <p>{{ movie.release }}</p>
 

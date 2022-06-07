@@ -29,21 +29,51 @@ See HW09 for baseline, then...
 
 Adding ***authentication***
 
-- Building login and logout views
-- Building login and logout templates
+- Building login and logout views and a login template
 
-    code yummytomatoes\settings.py
-        LOGIN_URL = "/login/"
-        LOGIN_REDIRECT_URL = "/"
-        LOGOUT_REDIRECT_URL = "/"
-    code common\templates\common\login.html
-    code yummytomatoes\urls.py
+        code common\views.py
+        code common\urls.py
+        code common\templates\common\login.html (for the form)
+        code yummytomatoes\settings.py
+            LOGIN_URL = "/login/"
+
+- Making the base template show 'messages' and use bootstrap styling
+
+        code common\templates\common\base.html
+        code yummytomatoes\settings.py
+            from django.contrib.messages import constants as messages
+            MESSAGE_TAGS = {
+                messages.DEBUG: 'alert-secondary',
+                messages.INFO: 'alert-info',
+                messages.SUCCESS: 'alert-success',
+                messages.WARNING: 'alert-warning',
+                messages.ERROR: 'alert-danger',
+            }
+
+- Adding login-awareness to our base template
+
+        code common\templates\common\base.html
 
 Adding ***authorization***
 
 - Creating groups and assigning permissions
+- Creating users and assigning groups
 - Adding permissions to our views
-- Adding logic to our templates
 
-    code movies\views.py
-    code movies\urls.py
+        code movies\urls.py
+
+        create: myapp.add_mymodel
+        read:   myapp.view_mymodel
+        update: myapp.change_mymodel
+        delete: myapp.delete_mymodel
+
+- Adding awareness to our templates
+
+        code movies\templates\movies\movie_list.py
+        code movies\templates\movies\movie_detail.py
+        code movies\templates\movies\movie_form.py
+
+        create: perms.myapp.add_mymodel
+        read:   perms.myapp.view_mymodel
+        update: perms.myapp.change_mymodel
+        delete: perms.myapp.delete_mymodel

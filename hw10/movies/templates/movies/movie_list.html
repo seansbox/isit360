@@ -11,7 +11,9 @@
     </ol>
 </nav>
 
+{% if perms.movies.add_movie %}
 <a class="btn btn-info float-end" href="{% url 'movies:create' %}">Add Movie</a>
+{% endif %}
 <h2>Select a movie below...</h2>
 
 {% if object_list %}

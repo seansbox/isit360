@@ -1,9 +1,24 @@
-from django.shortcuts import render
+from django.views.generic import TemplateView
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.signals import user_logged_out
+from django.contrib import messages
 
-def front(request):
-    context = {}
-    return render(request, 'common/front.html', context)
+class FrontView(TemplateView):
+    template_name = "common/front.html"
 
-def help(request):
-    context = {}
-    return render(request, 'common/help.html', context)
+class HelpView(TemplateView):
+    template_name = "common/help.html"
+
+class LoginView(SuccessMessageMixin, LoginView):
+    template_name = 'common/login.html'
+    success_url = '/'
+    success_message = "You have been successfully logged in!"
+
+class LogoutView(LogoutView):
+    next_page = '/'
+
+def show_message(sender, user, request, **kwargs):
+    messages.success(request, 'You have been successfully logged out!')
+
+user_logged_out.connect(show_message)
