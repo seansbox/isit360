@@ -19,11 +19,11 @@
     {{ form|crispy }}
     {% csrf_token %}
     <br>
+    {% if perms.movies.change_movie %}
     <input type="submit" class="btn btn-info" value="Save">
-    {% if object %}
-    {% if perms.movies.delete_movie %}
-    <a class="btn btn-danger" href="{% url 'movies:delete' movie.id %}">Delete</a>
     {% endif %}
+    {% if object and perms.movies.delete_movie %}
+    <a class="btn btn-danger" href="{% url 'movies:delete' movie.id %}">Delete</a>
     {% endif %}
 </form>
 

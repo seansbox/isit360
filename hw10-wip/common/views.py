@@ -12,7 +12,7 @@ class HelpView(TemplateView):
 
 class LoginView(SuccessMessageMixin, LoginView):
     template_name = 'common/login.html'
-    next_page = '/'
+    success_url = '/'
     success_message = "You have been successfully logged in!"
 
 class LogoutView(LogoutView):

@@ -2,6 +2,7 @@
     "files.exclude": {
         "**/.git": true,
         "**/.venv": true,
+        "**/.vscode": true,
         "**/.DS_Store": true,
         "**/*.pyc": true,
         "**/__pycache__": true

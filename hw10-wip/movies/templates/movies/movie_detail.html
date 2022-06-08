@@ -1,0 +1,37 @@
+{% extends 'movies/movie_base.html' %}
+{% load static %}
+
+{% block title %}{{ movie.name }}{% endblock %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'common:front' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'movies:index' %}">Movies</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ movie.name }}</li>
+    </ol>
+</nav>
+
+{% if perms.movies.change_movie %}
+<a class="btn btn-info float-end" href="{% url 'movies:update' movie.id %}">Update Movie</a>
+{% endif %}
+<h1>{{ movie.name }}</h1>
+<p>{{ movie.release }}</p>
+
+<p>
+    {% if movie.thumb %}
+        <img src="{{ movie.thumb }}" class="col-sm-2" alt="{{ movie.name }} Thumbnail">
+    {% endif %}
+</p>
+
+<p><i>{{ movie.summary }}</i></p>
+
+<p>Meter: {{ movie.meter }} | Score: {{ movie.score }}</p>
+
+<h2>Key Celebrities</h2>
+{% for celeb in movie.celebs.all %}
+    {{ celeb.name }} / 
+{% endfor %}
+
+{% endblock content %}
