@@ -1,9 +1,3 @@
----
-title: Welcome and Python Crash Course
-author: ISIT 360 Database Application Development | Homework 01
-date: SFCC Spring 2023 | Sean Lickfold
----
-
 # Welcome to Database Application Development!
 
 ## The course in a nutshell...
