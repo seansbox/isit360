@@ -1,0 +1,32 @@
+﻿[
+  {
+    "name": "Star Wars",
+    "year": "1977",
+    "genre": "Sci-fi",
+    "rotten_tomato": "92"
+  },
+  {
+    "name": "The Dark Crystal",
+    "year": "1982",
+    "genre": "Sci-fi",
+    "rotten_tomato": "79"
+  },
+  {
+    "name": "Out of Africa",
+    "year": "1985",
+    "genre": "Drama",
+    "rotten_tomato": "62"
+  },
+  {
+    "name": "Jurassic Park",
+    "year": "1993",
+    "genre": "Adventure",
+    "rotten_tomato": "92"
+  },
+  {
+    "name": "Planes, Trains, and Automobiles",
+    "year": "1987",
+    "genre": "Comedy",
+    "rotten_tomato": "92"
+  }
+]

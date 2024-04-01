@@ -1,47 +1,14 @@
 # ISIT 360 Database Application Development
 
-## How to install the tools for this course...
+This course builds on previous coursework and/or experience to design and implement database backends and frontends. Solutions include RDBMS and no-SQL designs, and both desktop and web-based front-ends. Previous database and coding experience is required.
 
-### Windows
+**_Prerequisite:_** Applied BAS degree students only.
 
-Run these three commands in PowerShell (Run as Administrator):
+## Learning Objectives
 
-    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
->
-    choco install git vscode python heroku-cli
->
-    python -m pip install pipenv
-
-### MacOS
-
-Run these three commands in macOS Terminal:
-
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
->
-    brew tap heroku/brew && brew install git visual-studio-code python heroku postgresql
->
-    python -m pip install pipenv
-
-## You should now have these tools installed...
-
-- [Chocolatey](https://chocolatey.org/) (Windows command-line app installer/manager)
-- [Homebrew](https://brew.sh/) (macOS command-line app installer/manager)
-- [Visual Studio Code](https://code.visualstudio.com/) (excellent text/dev editor)
-- [Python](https://www.python.org/) (programming language runtime)
-- [PipEnv](https://pipenv.pypa.io/) (python package/project manager)
-- [Git](https://git-scm.com/) (source code versioning/manager)
-- [Heroku](https://www.heroku.com/) (Internet app deployment platform)
-- [PostgreSQL](https://www.postgresql.org/) (Free database server; install needed on Mac to install psycopg2-binary towards the end of the course)
-
-## Here is a work-in-process module outline...
-
-- M01 Welcome and Python Crash Course *(ch1,4)*
-- M02 Files, Formats, and Serialization *(ch5,6)*
-- M03 Structuring Data and Querying It *(ch7,8)*
-- M04 Mapping Objects and Speaking Excel *(ch9,10)*
-- M05 Data Without Structure, with Structure *(ch11,12)*
-- M06 Building the Blocks of an MVC App *(dj1,2)*
-- M07 Making Templates and Displaying Data *(dj3,6)*
-- M08 Deploying a Database Application *(hero)*
-- M09 Data Forms and Permissions *(dj4,7)*
-- M10 Advanced Data Features & Strategies
+1. Design and implement both SQL and non-SQL databases.
+2. Transform data between different text-based database formats.
+3. Write SQL and non-SQL queries that filter, sort, and summarize table data.
+4. Create reports, data-entry forms, and form-based navigation using standalone programs.
+5. Create web-based reports, data-entry forms, and form-based navigation via client/server coding.
+6. Understand the process for creating interactive maps built from geo-spatial databases.

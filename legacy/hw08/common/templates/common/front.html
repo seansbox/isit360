@@ -1,0 +1,11 @@
+{% extends 'common/base.html' %}
+{% load static %}
+
+{% block title %}Welcome to YT!{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <h1>Welcome to Yummy Tomatoes!!</h1>
+    <img src="{% static 'common/logo.jpg' %}" class="img-fluid col-sm-4 mx-auto d-block" alt="Yummy Tomatoes Logo">
+</div>
+{% endblock content %}

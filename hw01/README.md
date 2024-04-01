@@ -24,64 +24,88 @@ Before starting this Assignment, make sure to read all the required materials fo
 
 We'll be using several tools/applications throughout this course. This "development stack" includes the following tools:
 
--   [Chocolatey](https://chocolatey.org/) _(command-line based application install manager)_
--   [Git](https://git-scm.com/) _(source code manager)_
--   [Code](https://code.visualstudio.com/) (Visual Studio) _(fancy text editor)_
--   [Python](https://www.python.org/) _(programming language and runtime)_
--   [Pipenv](https://github.com/pypa/pipenv) _(python package/project manager)_
+- [Chocolatey](https://chocolatey.org/) _(command-line based application install manager)_
+- [Git](https://git-scm.com/) _(source code manager)_
+- [Code](https://code.visualstudio.com/) (Visual Studio) _(fancy text editor)_
+- [Python](https://www.python.org/) _(programming language and runtime)_
+- [Pipenv](https://github.com/pypa/pipenv) _(python package/project manager)_
 
 Each are linked above, and I encourage you to familiarize yourself with them. We'll be going through them one-by-one in the first session as well.
 
 ## Installing The Stack
 
-We'll use **Windows PowerShell** to install these needed tools. Make sure to right-click and run **PowerShell** *as Administrator*, and execute the following commands. At the end of the course, you can use **chocolatey** to remove all of these tools as well. First we'll install **chocolately**:
+We'll use **Windows PowerShell** to install these needed tools. Make sure to right-click and run **PowerShell** _as Administrator_, and execute the following commands. At the end of the course, you can use **chocolatey** to remove all of these tools as well. First we'll install **chocolately**:
 
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 
 Ugh, yeah that is all a single command. Then run these on at a time...
 
     choco install -y vscode python
+
+>
+
     choco install -y git.install --force --params "'/GitAndUnixToolsOnPath /WindowsTerminal /NoAutoCrlf'"
+
+>
+
     choco install -y sqlite mongodb
+
+>
+
     choco upgrade all -y
 
 You may have to close and re-open PowerShell (again, as Administrator) and then run these commands...
 
     python -m pip install --upgrade pip pipenv pipupgrade
+
+>
+
     python -m pip install --upgrade sqlite_web streamlit
-    pipupgrade
 
-## Some Common Workflows
+>
 
-I'm just throwing some hints here for reference throughout the course.
+    pipupgrade --latest
 
-### Building a Project (from Windows Command Prompt)
+# Our First Project
 
--   Grab the project from [GitHub](https://www.github.com/) and run `git clone X`
--   Run the editor via `code .`
--   Initialize via `pipenv install`
+Just the hints...
 
-### Working a Project (from VS Code)
+    mkdir hw01
 
--   Save time with `pipenv shell`
--   Manage dependencies with `pipenv install [name]`
+>
 
-### Managing a Project (from VS Code)
+    cd hw01
 
--   See what has changed with `git status`
--   Commit the changes with `git add` and `git commit`
--   Upload and download the changes `git push` and `git pull`
+>
+
+    code .
+
+>
+
+    (edit hw01.py)
+
+>
+
+    pipenv install requests termcolor (you should use different packages)
+
+>
+
+    pipenv run python hw01.py
+
+>
+
+    bundler
 
 # Completing the Homework
 
 Create a **_hw01_** project/folder that demonstrates the following:
 
--   Contains a Python script named **_hw01.py_**
--   Imports an external, third-party module
--   Defines a class and uses inheritance
--   Leverages `pipenv` (and a Pipfile) to manage its dependencies
--   Contains at least 20 lines of (non-filler) code
--   Does not directly copy examples from the book or class
+- Contains a Python script named **_hw01.py_**
+- Imports an external, third-party module
+- Defines a class and uses inheritance
+- Leverages `pipenv` (and a Pipfile) to manage its dependencies
+- Contains at least 20 lines of (non-filler) code
+- Does not directly copy examples from the book or class
 
 Save a screenshot of your app _(successfully running)_ to `screenshot.jpg` in your project folder. (You can use `WIN+SHIFT+S` for easy access to the Windows built-in screenshot tool.)
 

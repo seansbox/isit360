@@ -1,0 +1,30 @@
+{% extends 'movies/movie_base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}New Movie{% endblock %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'common:front' %}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{% url 'movies:index' %}">Movies</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Movie Form</li>
+    </ol>
+</nav>
+
+<h1>Movie Form</h1>
+
+<form method="post">
+    {{ form|crispy }}
+    {% csrf_token %}
+    <br>
+    <input type="submit" class="btn btn-info" value="Save">
+    {% if object %}
+    {% if perms.movies.delete_movie %}
+    <a class="btn btn-danger" href="{% url 'movies:delete' movie.id %}">Delete</a>
+    {% endif %}
+    {% endif %}
+</form>
+
+{% endblock content %}
