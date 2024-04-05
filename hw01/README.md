@@ -18,7 +18,8 @@ Before starting this Assignment, make sure to read all the required materials fo
 
 We'll be using several tools/applications throughout this course. This "development stack" includes the following tools:
 
-- [Chocolatey](https://chocolatey.org/) _(command-line based application install manager)_
+- [Chocolatey](https://chocolatey.org/) _(command-line based application install manager)_<br>
+  or [WinGet](https://learn.microsoft.com/en-us/windows/package-manager/winget/) _(same thing)_
 - [Git](https://git-scm.com/) _(source code manager)_
 - [Code](https://code.visualstudio.com/) (Visual Studio) _(fancy text editor)_
 - [Python](https://www.python.org/) _(programming language and runtime)_
@@ -47,6 +48,12 @@ Ugh, yeah that is all a single command. Then run these on at a time...
 >
 
     choco upgrade all -y
+
+If you _don't_ have **choco** installed, and need/want to use WinGet, try these commands instead:
+
+Ugh, yeah that is all a single command. Then run these on at a time...
+
+    winget install vscode python git.git sqlite.sqlite mongodb --accept-source-agreements --accept-package-agreements
 
 You may have to close and re-open PowerShell (again, as Administrator) and then run these commands...
 
