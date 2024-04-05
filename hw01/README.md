@@ -90,7 +90,9 @@ Now you should be able to run the following commands and see what versions of py
 
 Close out your PowerShell window (running as Administrator). We shouldn't really need to run any shells as Administrator again until the end of the course when it's time to uninstall.
 
-TODO: Might as well put the uninstall instructions here.
+TODO: Might as well put the uninstall instructions here, for example:
+
+    winget uninstall python --purge
 
 # Our First Project
 
