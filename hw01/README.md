@@ -71,6 +71,12 @@ You may have to close and re-open PowerShell (again, as Administrator) and then 
 
     pipupgrade --latest
 
+What are these?!
+
+- **PIP.** Python's builtin package (external dependencies) manager.
+- **PIPUPGRADE.** PIP doesn't have a great way to upgrade all of the installed packages. The pipupgrade utility will help us get them all upgraded at ONCE!
+- **PIPENV.** If is very common for different Python projects/folders to require different versions of the same dependencies. PIPENV makes this really easy to manage by managing local 'Pipfile's and unique "python environments."
+
 # Our First Project
 
 Just the hints...
