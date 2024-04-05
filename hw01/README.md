@@ -55,7 +55,11 @@ Ugh, yeah that is all a single command. Then run these on at a time...
 
 If you _don't_ have **choco** installed, and need/want to use WinGet, try these commands instead. We'll still use **Windows PowerShell** to install these needed tools. Make sure to right-click and run **PowerShell** _as Administrator_, and execute the following commands:
 
-    winget install vscode python git.git sqlite.sqlite mongodb --accept-source-agreements --accept-package-agreements
+    winget install python.python.3.11 git.git sqlite.sqlite  --accept-source-agreements --accept-package-agreements
+
+>
+
+    winget install vscode mongodb --accept-source-agreements --accept-package-agreements
 
 ### Finally, Install Some Python Tools
 
