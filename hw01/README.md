@@ -88,6 +88,10 @@ Now you should be able to run the following commands and see what versions of py
     C:\Windows\System32>pipenv --version
     pipenv, version 2023.12.1
 
+Close out your PowerShell window (running as Administrator). We shouldn't really need to run any shells as Administrator again until the end of the course when it's time to uninstall.
+
+TODO: Might as well put the uninstall instructions here.
+
 # Our First Project
 
 Just the hints...
