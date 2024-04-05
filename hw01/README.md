@@ -77,6 +77,17 @@ What are these?!
 - **PIPUPGRADE.** PIP doesn't have a great way to upgrade all of the installed packages. The pipupgrade utility will help us get them all upgraded at ONCE!
 - **PIPENV.** If is very common for different Python projects/folders to require different versions of the same dependencies. PIPENV makes this really easy to manage by managing local 'Pipfile's and unique "python environments."
 
+Now you should be able to run the following commands and see what versions of python/pip you have installed:
+
+    C:\Windows\System32>python --version
+    Python 3.11.3
+    
+    C:\Windows\System32>pip --version
+    pip 24.0 from C:\Python311\Lib\site-packages\pip (python 3.11)
+    
+    C:\Windows\System32>pipenv --version
+    pipenv, version 2023.12.1
+
 # Our First Project
 
 Just the hints...
