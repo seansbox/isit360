@@ -29,6 +29,8 @@ Each are linked above, and I encourage you to familiarize yourself with them. We
 
 ## Installing The Stack
 
+### Using Chocolately
+
 We'll use **Windows PowerShell** to install these needed tools. Make sure to right-click and run **PowerShell** _as Administrator_, and execute the following commands. At the end of the course, you can use **chocolatey** to remove all of these tools as well. First we'll install **chocolately**:
 
     Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
@@ -49,11 +51,13 @@ Ugh, yeah that is all a single command. Then run these on at a time...
 
     choco upgrade all -y
 
-If you _don't_ have **choco** installed, and need/want to use WinGet, try these commands instead:
+### Using WinGet Instead of Chocolately
 
-Ugh, yeah that is all a single command. Then run these on at a time...
+If you _don't_ have **choco** installed, and need/want to use WinGet, try these commands instead. We'll still use **Windows PowerShell** to install these needed tools. Make sure to right-click and run **PowerShell** _as Administrator_, and execute the following commands:
 
     winget install vscode python git.git sqlite.sqlite mongodb --accept-source-agreements --accept-package-agreements
+
+### Finally, Install Some Python Tools
 
 You may have to close and re-open PowerShell (again, as Administrator) and then run these commands...
 
