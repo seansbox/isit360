@@ -6,11 +6,18 @@ Before starting this Assignment, make sure to read all the required materials fo
 
 What differentiates a _relational database management system_ (RDBMS)? Just looking at SQLite, one of smallest DB implementations...
 
-- **Performance & Scale** - [Max DB size: 281Tb](https://www.sqlite.org/limits.html) - Max row size: 1Gb
-- **Referential Integrity** - [Foreign Key Support](https://www.sqlite.org/foreignkeys.html) - `PRAGMA foreign_keys=ON` - ON DELETE and ON UPDATE
-- **Data Constraints** - [STRICT Tables](https://sqlite.org/stricttables.html)
+- **Performance & Scale**
+  - [Max DB size: 281Tb](https://www.sqlite.org/limits.html)
+  - Max row size: 1Gb
+- **Referential Integrity**
+  - [Foreign Key Support](https://www.sqlite.org/foreignkeys.html)
+  - `PRAGMA foreign_keys=ON`
+  - ON DELETE and ON UPDATE
+- **Data Constraints**
+  - [STRICT Tables](https://sqlite.org/stricttables.html)
 - **Complex Queries & Automation**
-- **Security & Reliability** - Atomicity, Consistency, Isolation, Durability (ACID)
+- **Security & Reliability**
+  - Atomicity, Consistency, Isolation, Durability (ACID)
 
 ## Key Concepts
 
