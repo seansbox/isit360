@@ -1,6 +1,6 @@
 import sqlite3
 
-con = sqlite3.connect('hw03.sqlite3')
+con = sqlite3.connect("hw03.sqlite3")
 cur = con.cursor()
 
 try:
@@ -8,28 +8,24 @@ try:
     cur.execute("SELECT id FROM homework LIMIT 1")
 except:
     # Initialize the database since it couldn't be read from
-    cur.execute('''
+    cur.execute(
+        """
         CREATE TABLE IF NOT EXISTS homework (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT UNIQUE,
             due TEXT
         )
-    ''')
+        """
+    )
 
-    cur.execute('INSERT INTO homework (name, due) VALUES (:name, :due)', {
-        'name': 'HW01',
-        'due': '2022-04-16'
-    })
+    cur.execute("INSERT INTO homework (name, due) VALUES (:name, :due)", {"name": "HW01", "due": "2024-04-16"})
 
-    cur.execute('INSERT INTO homework (name, due) VALUES (:name, :due)', {
-        'name': 'HW02',
-        'due': '2022-04-17'
-    })
+    cur.execute("INSERT INTO homework (name, due) VALUES (:name, :due)", {"name": "HW02", "due": "2024-04-17"})
 
     con.commit()
 
 print("ALL HOMEWORK:")
-for row in cur.execute('SELECT id, name, due FROM homework'):
+for row in cur.execute("SELECT id, name, due FROM homework"):
     print(f"  Homework {row[1]} ({row[0]}) is due on {row[2]}")
 
 print("REMAINING HOMEWORK:")
