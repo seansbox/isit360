@@ -1,32 +1,44 @@
 ﻿[
   {
-    "name": "Star Wars",
-    "year": "1977",
-    "genre": "Sci-fi",
-    "rotten_tomato": "92"
+    "Title": "Toy Story",
+    "Year": "1995",
+    "TomatoMeter": "100",
+    "AudienceScore": "92",
+    "SeanScore": "95"
   },
   {
-    "name": "The Dark Crystal",
-    "year": "1982",
-    "genre": "Sci-fi",
-    "rotten_tomato": "79"
+    "Title": "Dune: Part 2",
+    "Year": "2024",
+    "TomatoMeter": "93",
+    "AudienceScore": "95",
+    "SeanScore": "97"
   },
   {
-    "name": "Out of Africa",
-    "year": "1985",
-    "genre": "Drama",
-    "rotten_tomato": "62"
+    "Title": "Seven Samurai",
+    "Year": "1954",
+    "TomatoMeter": "100",
+    "AudienceScore": "97",
+    "SeanScore": "97"
   },
   {
-    "name": "Jurassic Park",
-    "year": "1993",
-    "genre": "Adventure",
-    "rotten_tomato": "92"
+    "Title": "Ghostbusters",
+    "Year": "1984",
+    "TomatoMeter": "95",
+    "AudienceScore": "88",
+    "SeanScore": "98"
   },
   {
-    "name": "Planes, Trains, and Automobiles",
-    "year": "1987",
-    "genre": "Comedy",
-    "rotten_tomato": "92"
+    "Title": "The Goonies",
+    "Year": "1985",
+    "TomatoMeter": "77",
+    "AudienceScore": "91",
+    "SeanScore": "93"
+  },
+  {
+    "Title": "Star Wars: A New Hope",
+    "Year": "1977",
+    "TomatoMeter": "93",
+    "AudienceScore": "96",
+    "SeanScore": "96"
   }
 ]

@@ -1,6 +1,7 @@
-﻿name,year,genre,rotten_tomato
-Star Wars,1977,Sci-fi,92
-The Dark Crystal,1982,Sci-fi,79
-Out of Africa,1985,Drama,62
-Jurassic Park,1993,Adventure,92
-"Planes, Trains, and Automobiles",1987,Comedy,92
+﻿Title,Year,TomatoMeter,AudienceScore,SeanScore
+Toy Story,1995,100,92,95
+Dune: Part 2,2024,93,95,97
+Seven Samurai,1954,100,97,97
+Ghostbusters,1984,95,88,98
+The Goonies,1985,77,91,93
+Star Wars: A New Hope,1977,93,96,96

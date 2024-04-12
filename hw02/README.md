@@ -10,6 +10,10 @@ Before starting this Assignment, make sure to read all the required materials fo
 - **_JavaScript Object Notation (JSON)_** is an easy to use lightweight data interchange format. It is a language-independent text format, supported by many programming languages. This format is used for data exchange between the web server and clients. Python’s json module, being a part of Python’s standard distribution, provides serialization functionality similar to the pickle module.
 - **_XML_** is another well-known data interchange format, used by a large number of applications. One of the main features of eXtensible Markup Language (XML) is that its format is both human readable and human readable. XML is widely used by applications of web services, office tools, and Service Oriented Architectures (SOA).
 
+## Useful Links
+
+- https://pandas.pydata.org/docs/index.html
+
 ## Completing the Homework
 
 Create a `hw02` project/folder that demonstrates the following:

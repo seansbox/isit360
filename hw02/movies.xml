@@ -1,22 +1,44 @@
 ﻿<movies>
   <movie>
-    <name>Star Wars</name>
-    <year>1977</year>
+    <title>Toy Story</title>
+    <year>1995</year>
+    <tomatoMeter>100</tomatoMeter>
+    <audienceScore>92</audienceScore>
+    <seanScore>95</seanScore>
   </movie>
   <movie>
-    <name>The Dark Crystal</name>
-    <year>1982</year>
+    <title>Dune: Part 2</title>
+    <year>2024</year>
+    <tomatoMeter>93</tomatoMeter>
+    <audienceScore>95</audienceScore>
+    <seanScore>97</seanScore>
   </movie>
   <movie>
-    <name>Out of Africa</name>
+    <title>Seven Samurai</title>
+    <year>1954</year>
+    <tomatoMeter>100</tomatoMeter>
+    <audienceScore>97</audienceScore>
+    <seanScore>97</seanScore>
+  </movie>
+  <movie>
+    <title>Ghostbusters</title>
+    <year>1984</year>
+    <tomatoMeter>95</tomatoMeter>
+    <audienceScore>88</audienceScore>
+    <seanScore>98</seanScore>
+  </movie>
+  <movie>
+    <title>The Goonies</title>
     <year>1985</year>
+    <tomatoMeter>77</tomatoMeter>
+    <audienceScore>91</audienceScore>
+    <seanScore>93</seanScore>
   </movie>
   <movie>
-    <name>Jurassic Park</name>
-    <year>1993</year>
-  </movie>
-  <movie>
-    <name>Planes, Trains, and Automobiles</name>
-    <year>1987</year>
+    <title>Star Wars: A New Hope</title>
+    <year>1977</year>
+    <tomatoMeter>93</tomatoMeter>
+    <audienceScore>96</audienceScore>
+    <seanScore>96</seanScore>
   </movie>
 </movies>

@@ -1,33 +1,44 @@
 import csv
 import json
 
+import pandas as pd
+
+file = open("movies.csv", "r", encoding="utf-8-sig")
+reader = csv.DictReader(file)
 movies = []
+for row in reader:
+    movies.append(row)
+file.close()
 
-# I'm using all Python builtin modules here.
-# You should use at least one external module to help you with your data though!
+# Calculate the average of the SeanScores
 
-# I stored my source data as CSV. Reading it in is built into Python...
-with open("movies.csv", "r", encoding="utf-8-sig") as csvfile:
-    reader = csv.DictReader(csvfile)
-    for row in reader:
-        movies.append(row)
+average = 0
+for movie in movies:
+    average += int(movie["SeanScore"])
+average = average / len(movies)
+print(f"Sean's average score on movies he has seen is {average}")
 
-# Here is a lazy way to write the movies to XML.
+with open("movies.json", "w", encoding="utf-8-sig") as jsonfile:
+    print(json.dumps(movies, indent=2))
+    jsonfile.write(json.dumps(movies, indent=2))
+
 with open("movies.xml", "w", encoding="utf-8-sig") as xmlfile:
     xmlfile.write("<movies>\n")
     for movie in movies:
-        print(movie["name"])
-        # AS XML ATTRIBUTES
-        # xmlfile.write(f"  <movie name=\"{movie['name']}\" year=\"{movie['year']}\" />\n")
-        # OR AS XML CHILD TAGS
+        print(movie["Title"])
         xmlfile.write(f"  <movie>\n")
-        xmlfile.write(f"    <name>{movie['name']}</name>\n")
-        xmlfile.write(f"    <year>{movie['year']}</year>\n")
-        xmlfile.write(f"    <genre>{movie['genre']}</genre>\n")
-        xmlfile.write(f"    <rotten_tomato>{movie['rotten_tomato']}</rotten_tomato>\n")
+        xmlfile.write(f"    <title>{movie['Title']}</title>\n")
+        xmlfile.write(f"    <year>{movie['Year']}</year>\n")
+        xmlfile.write(f"    <tomatoMeter>{movie['TomatoMeter']}</tomatoMeter>\n")
+        xmlfile.write(f"    <audienceScore>{movie['AudienceScore']}</audienceScore>\n")
+        xmlfile.write(f"    <seanScore>{movie['SeanScore']}</seanScore>\n")
         xmlfile.write(f"  </movie>\n")
     xmlfile.write("</movies>\n")
 
-# JSON is built-in too!
-with open("movies.json", "w", encoding="utf-8-sig") as jsonfile:
-    jsonfile.write(json.dumps(movies, indent=2))
+# Let's do the same stuff but with the pandas library!
+
+df = pd.read_excel("movies.xlsx")
+# print(df.head())
+with open("movies.html", "w", encoding="utf-8-sig") as htmlfile:
+    htmlfile.write(df.to_html())
+print(f"Sean's average score on movies he has seen is {df["SeanScore"].mean()}")
