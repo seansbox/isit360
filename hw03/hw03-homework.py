@@ -1,6 +1,6 @@
 import sqlite3
 
-con = sqlite3.connect("hw03.sqlite3")
+con = sqlite3.connect("hw03-homework.sqlite3")
 cur = con.cursor()
 
 try:
@@ -13,15 +13,12 @@ except:
         CREATE TABLE IF NOT EXISTS homework (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             name TEXT UNIQUE,
-            due TEXT
+            due DATE
         )
         """
     )
-
     cur.execute("INSERT INTO homework (name, due) VALUES (:name, :due)", {"name": "HW01", "due": "2024-04-16"})
-
     cur.execute("INSERT INTO homework (name, due) VALUES (:name, :due)", {"name": "HW02", "due": "2024-04-17"})
-
     con.commit()
 
 print("ALL HOMEWORK:")

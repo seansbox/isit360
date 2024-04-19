@@ -37,6 +37,20 @@ What differentiates a _relational database management system_ (RDBMS)? Just look
 - [SQLite Databases With Python](https://www.youtube.com/watch?v=byHcYRpMgI4) (90ish mins)
 - [Python SQLite Tutorial](https://www.youtube.com/watch?v=pd-0G0MigUA) (30ish mins)
 
+## Our Handy Graphical "Database Client"
+
+    > sqlite_web database.sqlite3
+
+## #NeverForget
+
+    SELECT *
+      FROM movies
+    LEFT OUTER JOIN map_movie_celeb
+      ON map_movie_celeb.movie_id = movies.id
+    LEFT OUTER JOIN celebs
+      ON map_movie_celeb.celeb_id = celebs.id
+    WHERE movies.id = '/m/the_wizard_of_oz_1939'
+
 # Completing the Homework
 
 Create a `hw03` project/folder that demonstrates the following:
