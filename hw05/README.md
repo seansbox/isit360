@@ -87,7 +87,7 @@ print(f"Deleted {result.deleted_count} documents")
 - [PyMongo Collection API](https://pymongo.readthedocs.io/en/stable/api/pymongo/collection.html)
 - [AWS Database Services](https://aws.amazon.com/products/databases/)
 
-## How to 'MongoDB' from the command-line
+## Example of Using 'MongoDB' from the Command-line
 
     mongo
     > db
@@ -98,15 +98,6 @@ print(f"Deleted {result.deleted_count} documents")
     > db.movies.updateMany({ name: "The Wizard of Oz" }, { $set: { meter: 100 } })
     > db.movies.updateMany({ name: "The Wizard of Oz" }, { $inc: { meter: 100 } })
     > db.movies.deleteMany({ name: "The Wizard of Oz" })
-
-## How to 'MongoDB' in Python
-
-    poetry config virtualenvs.in-project true
-    poetry init -n
-    code .
-    poetry add pymongo
-    (build your hw05.py file)
-    poetry run python hw05.py
 
 # Completing the Homework
 
