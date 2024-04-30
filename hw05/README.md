@@ -1,4 +1,4 @@
-# HW05 Data Without Structure, with Structure
+# HW05 Data Structure with No... Structure
 
 _Before starting this Assignment, make sure to read all the required materials for this module, which can be found in the corresponding module Discussion._
 
