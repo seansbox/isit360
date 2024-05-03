@@ -41,6 +41,10 @@ We'll focus on MongoDB for the homework. Unlike SQLite that can operate directly
 
     choco install mongodb
 
+Or using winget...
+
+    winget install mongo mongodb
+
 Now, we need to make sure that server is actually **running**. We can do this by running the following command in PowerShell (as Administrator):
 
     net start MongoDB
