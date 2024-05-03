@@ -59,7 +59,7 @@ If you _don't_ have **choco** installed, and need/want to use WinGet, try these 
 
 >
 
-    winget install vscode mongo mongodb --accept-source-agreements --accept-package-agreements
+    winget install vscode mongodb --accept-source-agreements --accept-package-agreements
 
 ### Finally, Install Some Python Tools
 
