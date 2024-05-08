@@ -184,9 +184,11 @@ Create a `hw06` project/folder that contains the following:
   - Successfully adjusts Django settings for PythonAnywhere.
   - Successfully sets up a web app on PythonAnywhere.
   - Successfully runs a web app on PythonAnywhere.
-  - Successfully allows access to the Django admin panel using admin/adminadmin credentials.
+  - Successfully allows access to the Django admin panel using `admin/adminadmin` credentials.
 - Leverages pipenv (and a Pipfile) to manage its dependencies.
 - Includes a screenshot.jpg of the app successfully running. (You can use `WIN+SHIFT+S` for easy access to the Windows built-in screenshot tool.)
 - Does not directly copy examples from the book or class.
+
+As most of this homework is setting up the environment, the code you write will be minimal. But the setup is important, as we'll be building on this environment for the rest of the course. This bundle will likely only include `screenshot.jpg`. Be sure that your site's URL is visible in the screenshot and accessible from the Internet.
 
 Bundle your project folder into a `bundle.docx` file by simply placing [`bundle`](https://github.com/seansbox/pybundler/raw/main/bundle.exe) in your project folder and running it. The required files, such as \*.py, Pipfile, screenshot.jpg, etc., will be automatically included. Finally, submit the `bundle.docx` file to _Canvas_.
