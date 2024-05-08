@@ -84,6 +84,8 @@ python manage.py createsuperuser
 
 The `django-admin startproject yummytomatoes .` command creates a new Django project called `yummytomatoes`. The `.` at the end of the command tells Django to create the project in the current directory. The `python manage.py migrate` command creates the database tables for the Django project. The `python manage.py createsuperuser` command creates a superuser account that you can use to log in to the Django admin panel. (More to come on that later.)
 
+For the super user account, use `admin` as the username and `adminadmin` as the password. These credentials will be used for checking your homework!
+
 Django projects are created with a directory structure that looks like this:
 
 ```bash
@@ -182,6 +184,7 @@ Create a `hw06` project/folder that contains the following:
   - Successfully adjusts Django settings for PythonAnywhere.
   - Successfully sets up a web app on PythonAnywhere.
   - Successfully runs a web app on PythonAnywhere.
+  - Successfully allows access to the Django admin panel using admin/adminadmin credentials.
 - Leverages pipenv (and a Pipfile) to manage its dependencies.
 - Includes a screenshot.jpg of the app successfully running. (You can use `WIN+SHIFT+S` for easy access to the Windows built-in screenshot tool.)
 - Does not directly copy examples from the book or class.
