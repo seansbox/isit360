@@ -138,7 +138,7 @@ Django doesn't have an opinion about the style of our web pages. It's up to us t
 pipenv install django-bootstrap5
 ```
 
-We're going to use _django-bootstrap5_ to make our site look nice. We'll also need to add it to the end of our _INSTALLED_APPS_ in _settings.py_.
+We're going to use this [django-bootstrap5](https://github.com/zostera/django-bootstrap5) module to make our site look nice. We'll also need to add it to the end of our _INSTALLED_APPS_ in _settings.py_.
 
 ```python
 INSTALLED_APPS = (
@@ -152,17 +152,20 @@ We need to reload the web app in PythonAnywhere and refresh the page in our web 
 
 ### movies/templates/movies/index.html
 
-```html
-{% extends 'movies/base.html' %} {% block title %}Hello, world!{% endblock %} {% block content %}This site is coming
-soon!{% endblock %}
+```django-html
+{% extends 'movies/base.html' %}
+{% block title %}Hello, world!{% endblock %}
+{% block content %}This site is coming soon!{% endblock %}
 ```
 
 Wait, what? We're using _extends_ and _block_? What is this magic? This is Django's template inheritance that we read about. We're extending a _base.html_ template (which we'll make in a second) and we're overriding the _title_ and _content_ blocks. Let's create the base template now.
 
 ### movies/templates/movies/base.html
 
-```html
-{% extends 'django_bootstrap5/bootstrap5.html' %} {% load django_bootstrap5 %} {% block bootstrap5_content %}
+```django-html
+{% extends 'django_bootstrap5/bootstrap5.html' %}
+{% load django_bootstrap5 %}
+{% block bootstrap5_content %}
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/5.3.3/darkly/bootstrap.min.css" />
 
@@ -193,7 +196,9 @@ Wait, what? We're using _extends_ and _block_? What is this magic? This is Djang
 <div class="container">
   <h1>{% block bootstrap5_title %}{% block title %}(no title){% endblock %}{% endblock %}</h1>
 
-  {% autoescape off %}{% bootstrap_messages %}{% endautoescape %} {% block content %}(no content){% endblock %}
+  {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+  {% block content %}(no content){% endblock %}
 </div>
 
 {% endblock %}
