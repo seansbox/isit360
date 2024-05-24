@@ -114,7 +114,7 @@ One last plumbing bit. We need to create a _URL pattern_ in our project's _urls.
 
 ```python
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 
 urlpatterns = [
     path("", include("movies.urls")),
