@@ -96,15 +96,13 @@ Okay, so what's going on here? We're importing the _path_ function from Django's
 
 We need to create an html _template_ in our _movies_ application that will be rendered by that _index_ view function of ours. We can do this by creating a new directory called _templates_ in the _movies_ directory. This is where we will put all of our _html_ templates for our movies application. We will also need to add this new directory to our _TEMPLATES_ in _settings.py_. We can use PythonAnywhere's "Files" editor to do this. Open the file _yummytomatoes/settings.py_ and add _movies_ to the _DIRS_ list in the _TEMPLATES_ dictionary. Again, your project and application names will be different, but the process is the same.
 
-````python
-
 ### movies/templates/movies/index.html
 
 ```html
 Hello, world!
-````
+```
 
-Ugh, what an ugly template! But it's a start. We'll make it look better in a moment. For now, let's just make sure it works.
+Ugh, what an ugly template! But it's a start. We'll make it look better in a moment. For now, let's just make sure it works. Notice that the path is kind of weird? Our application name is repeated twice.
 
 ## 4. Create a _URL pattern_ in our project's _urls.py_ file
 
