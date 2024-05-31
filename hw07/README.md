@@ -142,7 +142,7 @@ We're going to use this [django-bootstrap5](https://github.com/zostera/django-bo
 INSTALLED_APPS = (
     ...
     "movies",
-    "django-bootstrap5",
+    "django_bootstrap5",
 )
 ```
 
