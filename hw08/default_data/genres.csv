@@ -1,4 +1,4 @@
-id,name
+﻿id,name
 1,Comedy
 2,Romance
 3,Drama
@@ -6,13 +6,13 @@ id,name
 5,Fantasy
 6,Adventure
 7,Action
-8,Mystery & thriller
+8,Mystery & Thriller
 9,Sci-fi
 10,Crime
 11,Horror
-12,Kids & family
+12,Kids & Family
 13,Animation
-14,Lgbtq+
+14,LGBTQ+
 15,Music
 16,History
 17,War
