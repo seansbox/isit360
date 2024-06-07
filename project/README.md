@@ -18,9 +18,17 @@ Sean
 
 Your task is to develop a web-based, database application that fulfills the requirements listed below. You may use any of the tools and techniques we've covered in this course. When complete, there are two important components to the project submission:
 
-- **_Project submission:_** Submit your project as a zip file containing your project folder to the Assignment in Canvas by the due date. Due to its final placement in the course schedule, **the project cannot be submitted late.**
+- **_Live project:_** Provide me with access to the live project, running on the Internet, **until 3 days after the final day of course finals**. After this date, you may remove my access and/or decommission the site. I need to be able to login as the _admin_ user and as a _sean_ user to test your permissions. (See requirements below.)
 
-- **_Live project:_** Additionally, provide me with access to the live project, running on the Internet, **until 3 days after the final day of course finals**. After this date, you may remove my access and/or decommission the site.
+- **_Project submission:_** Submit your project as a bundle.docx file containing your project folder to the Assignment in Canvas by the due date. Due to its final placement in the course schedule, **the project cannot be submitted late.** If you're building your project directly on PythonAnywhere, you can run this command in the Bash shell to create a zip file of your entire project folder that you can download for bundling:
+
+```bash
+zip -r project.zip ./*
+```
+
+Then go to the Files section of the PythonAnywhere dashboard to download the zip file. Extract it to your local computer, and then, as per usual...
+
+Bundle your project folder into a `bundle.docx` file by simply placing [`bundle`](https://github.com/seansbox/pybundler/raw/main/bundle.exe) in your project folder and running it. The required files, such as \*.py, Pipfile, screenshot.jpg, etc., will be automatically included. Finally, submit the `bundle.docx` file to _Canvas_.
 
 ## Requirements
 
