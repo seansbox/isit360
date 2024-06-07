@@ -1,0 +1,14 @@
+{% extends 'movies/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}Login | Yummy Tomatoes{% endblock %}
+
+{% block content %}
+
+<form method="post" action="{% url 'login' %}">
+  {% csrf_token %}
+  {% bootstrap_form form layout=layout size=size %}
+  {% bootstrap_button button_type="submit" content="OK" %}
+</form>
+
+{% endblock %}
