@@ -8,6 +8,12 @@ _Before starting this Assignment, make sure to read all the required materials f
 - Utilize Django’s authentication system to manage user accounts and permissions.
 - Create and handle forms in Django for user input.
 
+## Related Links
+
+- [Bootstrap 5.1 Documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+- [Django Bootstrap Documentation](https://django-bootstrap5.readthedocs.io/en/latest/)
+- [Django Bootstrap Example](https://github.com/zostera/django-bootstrap5/tree/main/example/templates/app)
+
 ## Introduction to Django Sessions
 
 [Django Sessions](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Sessions) allow you to store and retrieve arbitrary data on a per-site-visitor basis. They help you track the state of a user's interaction with your site across multiple requests. This is complex code to write ourselves, so once again having this functionality built into Django in a flexible way is a huge time-saver.
@@ -154,6 +160,7 @@ Updates your PythonAnywhere project to contain the following:
 
   - Implements Django sessions to track user state.
   - Integrates Django’s authentication system to manage user accounts.
+  - Defines a custom user Group and assigns permissions to it.
   - Creates and handles at least one form to collect user input and update your data.
 
 - Leverages pipenv (and a Pipfile) to manage its dependencies.
