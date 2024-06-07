@@ -2,6 +2,8 @@
 
 _Before starting this Assignment, make sure to read all the required materials for this module, which can be found in the corresponding module Discussion._
 
+**Please watch the live session. It walks you through some specific examples of how to implement what is below effectively. You will need to implement these features for your project.**
+
 ## Objectives
 
 - Understand and implement Django sessions to track user state.
