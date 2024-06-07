@@ -4,15 +4,19 @@
 {% block title %}Welcome to Yummy Tomatoes!{% endblock %}
 
 {% block content %}
-<br>
 
+{% if perms.movies.add_movie %}
+<p><a href="{% url 'movies:create' %}" class="btn btn-primary">Add</a></p>
+{% endif %}
+
+<p>
 {% if object_list %}
     {% for movie in object_list %}
 
     <div class="float-start col-sm-2">
         <div class="card m-1" style="height: 10em; background-image: url({{ movie.thumb }})">
             <div class="card-body">
-                <h5 class="card-title" style="text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000">{{ movie.name }}</h5>
+                <h5 class="card-title" style="text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000"><a href="{% url 'movies:detail' movie.id %}">{{ movie.name }}</a></h5>
                 <h6 class="card-subtitle mb-2 text-muted" style="text-shadow: 0 0 4px #000, 0 0 4px #000, 0 0 4px #000">{{ movie.release }}</h6>
             </div>
         </div>
@@ -22,5 +26,6 @@
 {% else %}
     <p>We're so sorry, but it appears that our movie data is currently under maintenace. Please check back again soon!</p>
 {% endif %}
+</p>
 
 {% endblock %}

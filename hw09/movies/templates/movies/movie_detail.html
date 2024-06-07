@@ -1,0 +1,41 @@
+{% extends 'movies/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}{{ movie.name }}{% endblock %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url 'movies:home' %}">Movies</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{ movie.name }}</li>
+  </ol>
+</nav>
+
+<p>
+{% if perms.movies.change_movie %}
+  <a href="{% url 'movies:update' movie.id %}" class="btn btn-primary">Update</a>
+{% endif %}
+{% if perms.movies.delete_movie %}
+  <a href="{% url 'movies:delete' movie.id %}" class="btn btn-danger">Delete</a>
+{% endif %}
+</p>
+
+<p>
+    {% if movie.thumb %}
+        <img src="{{ movie.thumb }}" class="col-md-3" alt="{{ movie.name }} Thumbnail">
+    {% endif %}
+</p>
+
+<p><b>Released on {{ movie.release }}</b></p>
+
+<p><i>{{ movie.summary }}</i></p>
+
+<p>Meter: {{ movie.meter }} | Score: {{ movie.score }}</p>
+
+<h2>Key Celebrities</h2>
+{% for celeb in movie.celebs.all %}
+    {{ celeb.name }} /
+{% endfor %}
+
+{% endblock %}

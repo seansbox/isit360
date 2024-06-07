@@ -11,7 +11,26 @@ from .models import Movie
 #    return render(request, 'movies/index.html', context)
 
 
+class MovieCreateView(CreateView):
+    model = Movie
+    fields = ["name", "release", "thumb", "summary", "meter", "score"]
+
+
+class MovieUpdateView(UpdateView):
+    model = Movie
+    fields = ["name", "release", "thumb", "summary", "meter", "score"]
+
+
+class MovieDeleteView(DeleteView):
+    model = Movie
+    success_url = "/"
+
+
 class MovieListView(ListView):
+    model = Movie
+
+
+class MovieDetailView(DetailView):
     model = Movie
 
 

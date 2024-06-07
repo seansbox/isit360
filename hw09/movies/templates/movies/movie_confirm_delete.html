@@ -1,0 +1,17 @@
+{% extends 'movies/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}Confirm Delete{% endblock %}
+
+{% block content %}
+
+<p>Are you sure you want to delete <i>{{ movie.name }}?</i></p>
+
+<form method="post">
+  {% csrf_token %}
+  {% bootstrap_form form layout=layout size=size %}
+  {% bootstrap_button button_type="submit" content="Confirm" %}
+  <a class="btn btn-secondary" href="{% url 'movies:detail' movie.id %}">Cancel</a>
+</form>
+
+{% endblock %}
